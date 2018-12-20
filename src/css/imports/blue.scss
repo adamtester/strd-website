@@ -21,32 +21,33 @@ Table of contents
 12. footer
 --------------------------------------------- */
 
-@import './imports/_mixins';
 
-@import './imports/_theme-options-green';
+@import 'mixins';
 
-@import './imports/_reset';
+@import 'theme-options-blue';
 
-@import './imports/_loader';
+@import 'reset';
 
-@import './imports/_global';
+@import 'loader';
 
-@import './imports/_buttons';
+@import 'global';
 
-@import './imports/_header';
+@import 'buttons';
 
-@import './imports/_welcome';
+@import 'header';
 
-@import './imports/_home';
+@import 'welcome';
 
-@import './imports/_blog';
+@import 'home';
 
-@import './imports/_our-work';
+@import 'blog';
 
-@import './imports/_faq';
+@import 'our-work';
 
-@import './imports/_aside';
+@import 'faq';
 
-@import './imports/_contact';
+@import 'aside';
 
-@import './imports/_footer';
+@import 'contact';
+
+@import 'footer';

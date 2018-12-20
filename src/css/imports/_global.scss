@@ -1,0 +1,486 @@
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+
+::selection {
+  background: $primaryColor;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: $primaryColor;
+  color: #fff;
+}
+
+.align-self-center {
+	-ms-flex-item-align: center!important;
+    align-self: center!important;
+}
+
+.align-self-bottom {
+	-ms-flex-item-align: flex-end!important;
+    align-self: flex-end!important;
+}
+
+.section {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	position: relative;
+
+	&.background {
+		background: #F4F8FB;
+	}
+}
+
+.page {
+
+	.cover {
+		min-height: 270px;
+		position: relative;
+		margin-top: 80px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0px;
+			top: 0px;
+			right: 0px;
+			bottom: 0px;
+			background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+			z-index: 2;
+			opacity: 0.97;
+		}
+
+		.page-top {
+			position: absolute;
+			width: 100%;
+			top: 80px;
+			z-index: 3;
+
+			h1 {
+				@include font($normal, 36px);
+				line-height: 46px;
+				letter-spacing: 1.4px;
+				color: #fff;
+				text-align: center;
+				padding-bottom: 10px;
+				position: relative;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 50px;
+					height: 1px;
+					border-bottom: 1px solid #FFFFFF;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					margin: auto;
+				}
+			}
+
+			.breadcrumb {
+				float: none;
+				@include radius(8px);
+				background: none;
+				padding: 0px;
+				margin-top: 8px;
+				margin-bottom: 0px;
+				display: inline-block;
+				text-align: center;
+				border: 1px solid $breadcrumbColor;
+				padding-left: 20px;
+				padding-right: 20px;
+
+				li {
+					@include font($normal, 14px);
+					color: $textLight;
+					line-height: 28px;
+					margin-left: 10px;
+					display: inline-block;
+
+					&:after {
+						content: "|";
+						margin-left: 11px;
+						color: $textLight;
+					}
+
+					&:first-child {
+						margin-left: 0px;
+					}
+
+					&:last-child {
+						&:after {
+							content: '';
+							margin-left: 0px;
+						}
+					}
+
+					a {
+						@include font($normal, 14px);
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+
+	.page-bottom {
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@include font($normal, 16px);
+		letter-spacing: 0.88px;
+		line-height: 28px;
+		color: $textDark;
+
+		p {
+			margin-bottom: 28px;
+		}
+
+		.home-services-item {
+			margin-top: 0px;
+			margin-bottom: 30px;
+		}
+
+		.about {
+			position: relative;
+			float: left;
+			width: 100%;
+			margin-bottom: 100px;
+
+			&.left {
+				
+				.about-image {
+					float: right;
+				}
+
+				.about-text {
+					left: 0px;
+				}
+			}
+
+			.about-image {
+				position: relative;
+				width: 70%;
+				float: left;
+				height: 430px;
+				@include radius(5px);
+				overflow: hidden;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.08);
+				z-index: 1;
+
+				&:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					left: 0px;
+					top: 0px;
+					z-index: 2;
+					background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+					opacity: .20;
+				}
+			}
+
+			.about-text {
+				position: absolute;
+				z-index: 2;
+				width: 50%;
+				float: right;
+				right: 0px;
+				top: 50%;
+				transform: perspective(1px) translateY(-50%);
+				background: #fff;
+				box-shadow: 0 2px 48px 0 rgba(0,0,0,0.08);
+				@include radius(5px);
+				padding: 30px;
+				padding-bottom: 10px;
+				text-align: center;
+
+				h2 {
+					@include font($normal, 24px);
+					line-height: 38px;
+					letter-spacing: 1.75px;
+					color: $headingDark;
+					margin-bottom: 20px;
+				}
+
+				p {
+					@include font($normal, 14px);
+					line-height: 26px;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+.page-gallery {
+	height: 400px;
+	display: block;
+	overflow: hidden;
+	@include radius(4px);
+	margin-bottom: 30px;
+
+	&.small {
+		height: 165px;
+	}
+}
+
+.mtop-70 {
+	margin-top: 70px !important;
+}
+
+.mbottom-20 {
+	margin-bottom: 20px !important;
+}
+
+.mbottom-30 {
+	margin-bottom: 30px !important;
+}
+
+.mbottom-40 {
+	margin-bottom: 40px !important;
+}
+
+.mbottom-50 {
+	margin-bottom: 50px !important;
+}
+
+.mbottom-60 {
+	margin-bottom: 60px !important;
+}
+
+.mbottom-0 {
+	margin-bottom: 0px !important;
+}
+
+.pbottom-70 {
+	padding-bottom: 70px !important;
+}
+
+blockquote {
+	margin-bottom: 28px;
+	padding: 30px;
+	padding-top: 40px;
+	@include radius(4px);
+	background: #F4F8FB;
+	overflow: hidden;
+
+	.text {
+		position: relative;
+		text-align: center;
+
+		p {
+			position: relative;
+			width: 100%;
+			z-index: 2;
+			margin-bottom: 10px !important;
+		}
+
+		&:before {
+			font-family: FontAwesome;
+			content: "\f10d";
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			color: $headingDark;
+			z-index: 1;
+			font-size: 40px;
+			color: darken(#F4F8FB, 5%)
+		}
+		&:after {
+			font-family: FontAwesome;
+			content: "\f10e";
+			position: absolute;
+			right: 0px;
+			bottom: 0px;
+			color: $headingDark;
+			z-index: 1;
+			font-size: 40px;
+			color: darken(#F4F8FB, 5%)
+		}
+	}
+
+	.author {
+		color: $headingDark;
+		text-align: center;
+	}
+}
+
+.left-heading {
+	.section-title {
+		@include font($normal, 28px);
+		color: $headingDark;
+		letter-spacing: 1.75px;
+		line-height: 42px;
+		margin-bottom: 20px !important;
+	}
+}
+
+.center-heading {
+	text-align: center;
+
+	.section-title {
+		@include font($normal, 30px);
+		color: $headingDark;
+		letter-spacing: 1.30px;
+		line-height: 40px;
+		margin-bottom: 20px !important;
+	}
+}
+
+.left-text {
+	@include font($normal, 16px);
+	color: $textDark;
+	line-height: 28px;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.center-text {
+	text-align: center;
+	@include font($normal, 16px);
+	color: $textDark;
+	line-height: 28px;
+	letter-spacing: 1px;
+	margin-bottom: 50px;
+
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+.services-post {
+	margin-bottom: 30px;
+	@include radius(8px);
+	background: #fff;
+	box-shadow: 0 2px 48px 0 rgba(0,0,0,0.08);
+	display: block;
+
+	&:hover {
+		.post-content {
+			.icon {
+				right: 30px;
+			}
+		}
+	}
+
+	.img {
+		overflow: hidden;
+		@include radius(8px);
+		border-bottom-right-radius: 0px;
+		border-bottom-left-radius: 0px;
+		position: relative;
+		height: 200px;
+	}
+
+	.post-content {
+		padding: 25px;
+		padding-bottom: 5px;
+		padding-top: 35px;
+		position: relative;
+
+		.icon {
+			position: absolute;
+			width: 50px;
+			right: 40px;
+			top: -25px;
+			background-image: linear-gradient(127deg, $gradientDark 0%, $gradientLight 91%);
+			text-align: center;
+			@include radius(4px);
+			height: 50px;
+			color: #fff;
+			@include transition(.3s);
+
+			i {
+				display: block;
+				width: 50px;
+				height: 52px;
+				line-height: 50px;
+				font-size: 20px;
+			}
+		}
+
+		h3 {
+			margin-bottom: 10px !important;
+			@include font($normal, 16px);
+			color: $headingDark;
+			letter-spacing: 1px;
+			line-height: 26px;
+			@include transition(.3s);
+		}
+
+		.text {
+			@include font($normal, 14px);
+			color: $textDark;
+			letter-spacing: 0.88px;
+			line-height: 26px;
+			margin-bottom: 20px;
+
+			&.post-detail {
+				@include font($normal, 16px);
+				line-height: 28px;
+				text-align: left;
+			}
+		}
+	}
+}
+
+.rounded {
+	border-radius: 8px !important;
+}
+
+
+@media (max-width : 991px) {
+	.page {
+		.cover {
+			margin-top: 80px;
+
+			h1 {
+				font-size: 26px !important;
+				line-height: 36px !important;
+			}
+
+			.page-top {
+				text-align: center;
+			}
+		}
+
+		.page-bottom {
+			.about {
+				overflow: initial !important;
+				margin-bottom: 30px !important;
+
+				.about-image {
+					width: 100% !important;
+					height: 300px;
+				}
+
+				.about-text {
+					position: relative !important;
+					width: 100% !important;
+					top: 0% !important;
+					transform: perspective(1px) translateY(-0%) !important;
+					box-shadow: 0 2px 48px 0 rgba(0,0,0,0.06);
+				}
+			}
+		}
+	}
+
+	.page-gallery {
+		height: 185px;
+	}
+
+	.mobile-bottom-fix {
+		margin-bottom: 30px;
+	}
+}

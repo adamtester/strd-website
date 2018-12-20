@@ -1,57 +1,54 @@
-<footer class="bg-black ph3 pv4 white">
-
-	<div class="mw7 center pt3">
-
-		<div class="measure-narrow center mb4">
-
-			<img src="/img/logo.svg" alt="Kaldi logo" class="db w4 center mb4 br0">
-			<p class="f3 lh-title light-gray b tc mb2">Newsletter subscribe</p>
-			<p>Get awesome news from us in your inbox every two weeks. Be the first to learn about new products.</p>
-
-			{{ partial "newsletter-form" . }}
-
-		</div>
-
-		<div class="flex-ns justify-between">
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Kaldi</h3>
-				<ul class="mb3">
-					<li><a href="/" class="link">Home</a></li>
-					<li><a href="/products" class="link">Our products</a></li>
-					<li><a href="/values" class="link">About</a></li>
-					<li><a href="/post" class="link">Blog</a></li>
-					<li><a href="/contact" class="link">Contact</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb1 primary">Find out more</h3>
-				<ul class="mb3">
-					<li><a href="/post/jamaica-blue/" class="link">Latest offers</a></li>
-					<li><a href="/contact" class="link">Schedule and appointment</a></li>
-				</ul>
-			</div>
-
-			<div>
-				<h3 class="f4 b lh-title mb2 primary">Social media</h3>
-				<ul class="mhn2">
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-facebook") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-twitter") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-instagram") }}
-					{{ partial "social-icon" (dict "link" "#" "svg" "icons-vimeo") }}
-				</ul>
-			</div>
-
-		</div>
-	</div>
-
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12">
+                <img src="assets/images/green-logo-white.svg" class="logo" alt="">
+                <div class="text">Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <h5>Helpful Links</h5>
+                <ul class="footer-nav">
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Our Work</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>About Us</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Services</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Blog</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Contact</span></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <h5>Latest Apps</h5>
+                <ul class="footer-nav">
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Dance School</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Coiner</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Cloud Manager</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Coding Life</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-right"></i><span>Smart Office</span></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-12">
+                <h5>Contact Us</h5>
+                <div class="address">
+                    <p>455 West Orchard Street<br>Kings Mountain, NC 28086</p>
+                    <p>Phone: (272) 211-7370</p>
+                    <p><span>E-Mail:</span><a href="#">support@yourbrand.com</a></p>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github-square"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="copyright">&copy; 2018 ST Research &amp; Development. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
 </footer>
 
 {{ partial "svg" . }}
 
 <script src="/app.js"></script>
-
-</body>
-
-</html>
